@@ -1,0 +1,60 @@
+﻿@model User
+
+<h1>Create new User</h1>
+
+<table class="table table-bordered table-striped table-hover table-primary">
+    <tbody>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" class="form-control" /></td>
+        </tr>
+        <tr>
+            <th>Date of Birth</th>
+            <td><input type="datetime" class="form-control" /></td>
+        </tr>
+        <tr>
+            <th>PAN</th>
+            <td><input type="text" class="form-control" /></td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td><textarea class="form-control"></textarea></td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio1">Male</label>
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio2">Female</label>
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio3">Others</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>Mobile</th>
+            <td><input type="text" class="form-control" /></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="email" class="form-control" /></td>
+        </tr>
+        <tr>
+            <th>Comments</th>
+            <td><textarea class="form-control"></textarea></td>
+        </tr>
+        <tr>
+            <th>Department Id</th>
+            <td><input type="number" class="form-control" /></td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <button type="submit" class="btn btn-primary">Create User</button>
+    <a asp-controller="User" asp-action="Index" class="btn btn-primary">Back to Listing</a>
+</div>
+
+
