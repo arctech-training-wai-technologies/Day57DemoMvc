@@ -1,0 +1,95 @@
+BASIC - Beginers allpurpose sytem instruction code - VB
+=======================================================
+Disadvantages: spagetti code / noodles code
+-------------------------------------------------------
+sdf
+sdf
+sdf
+if(something) goto xyz;
+
+dffsd
+sf
+
+int i;
+
+abc:
+sdf
+sdf
+
+xyz:
+sdffd
+fsdfs
+ff
+if(i < 10)
+goto abc;
+------------------------------------------
+
+C programming - advantages - disadvantages
+==========================================
+>> advantages
+- Poor language (32 keywords)
+- structured language 
+
+>>disadvantages
+- data sharing is global
+- function hell
+- god functions - large function which tries to do many things
+
+C++
+==========================================
+>> advantages
+- OO - Object Oriented
+- data sharing is by message passing. Data is private
+>> disadvantages
+- Still open to abuse by less skilled programmers
+  - Programmers can still write god classes
+  - Incorrectly use advanced features like inheritance and polymorphism to make code unnecessarily complex,
+  - Over engineer
+  
+Web Technologies
+==========================================
+PHP, Python, ASP
+
+ASP
+==========================================
+index.asp
+<h1>Hello</h1>
+<% if(something)
+{
+%>
+sdsdfsfsdfsdfsdffsd
+<% 
+}
+else 
+{%>
+the fox jumped over
+<%
+}%>
+
+-- ASP.NET Framework --
+==========================================
+Model (Business & Database Logic) and View (html) were not separated
+Large proprietory code base which programmers had to study
+Because the HTTP workings were hidden by using events like click and postback etc, any changes to the default working of asp.net controls, required workaround coding, which complicated the code
+
+index.aspx
+----------
+<form runat="server">
+<asp:TextBox ID="TextBox1" />
+<asp:Button OnClick="Button_Click" />
+</form>
+
+index.aspx.cs
+-------------
+class Index
+{
+	public void Button_Click(...)
+	{
+		TextBox1.Text = "Hello";
+		
+		SqlConnection c = new SqlConnection
+	}
+}
+
+MVC - Model View Controller
+===========================
