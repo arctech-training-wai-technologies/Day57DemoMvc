@@ -1,14 +1,49 @@
-﻿@page
-@model Day57DemoMvc.Views.Employee.IndexModel
+﻿@model List<EmployeeModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
 @{
 }
 
-<h1>Welcome to MVC Home Page</h1>
+<h1>Employees Listing (Total @Model.Count)</h1>
 
-<div>
-    This is a sample MCV Page
-</div>
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>DateOfBirth</td>
+            <td>Pan</td>
+            <td>Address</td>
+            <td>Gender</td>
+            <td>MobileNumber</td>
+            <td>Email</td>
+            <td>Comment</td>
+            <td>DepartmentRefId</td>
+            <td>&nbsp;</td>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var employee in Model)
+    {
+        <tr>
+            <td>@employee.Id</td>
+            <td>@employee.FirstName</td>
+            <td>@employee.LastName</td>
+            <td>@employee.DateOfBirth</td>
+            <td>@employee.Pan</td>
+            <td>@employee.Address</td>
+            <td>@employee.Gender</td>
+            <td>@employee.MobileNumber</td>
+            <td>@employee.Email</td>
+            <td>@employee.Comment</td>
+            <td>@employee.DepartmentRefId</td>
+            <td>
+                <a asp-controller="Employee" asp-action="Details" asp-route-id="@employee.Id">Details</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
 
-<h4>We are just learning</h4>
-
-<p>How is this happening</p>
